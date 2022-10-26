@@ -3,7 +3,7 @@ const container = document.querySelector('.blogs')
 
 
 const renderPosts = async () => {
-    const response = await fetch('http://localhost:3000/posts')
+    const response = await fetch('http://localhost:3000/posts?_sort=likes&_order=desc')
     const posts = await response.json();
 
     let template = '';
