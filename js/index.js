@@ -10,10 +10,10 @@ const renderPosts = async () => {
   posts.forEach((post) => {
     template += `
       <div class='post'>
-        <h2>${post.title}</h2>
+        <h1>${post.title}</h1>
         <p><small>${post.likes} likes</small></p>
         <p>${post.body.slice(0, 200)}</p>
-        <a href="/details.html">read more...</a>
+        <a href="/details.html?id=${post.id}">read more...</a>
       <div/>
     `;
   });
